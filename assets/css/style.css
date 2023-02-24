@@ -1,26 +1,27 @@
 /* Geral */
-:root{
-    --color-bg-primary: #102f5f;
+:root {
+    --color-bg-primary: #145c6a;
     --color-font-primary: #fff;
+    --color-line: #333;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: Helvetica, sans-serif;
-    color: #333;
+    color: #000;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url('../images/night.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
-    
+
 }
 
-button{
+button {
     background-color: #fdfdfd;
     color: var(--color-bg-primary);
     border: 2px solid var(--color-bg-primary);
@@ -33,25 +34,144 @@ button{
     transition: 0.4s;
 }
 
-button:hover{
+button:hover {
     background-color: var(--color-bg-primary);
     color: var(--color-font-primary);
 }
 
-button:hover > i {
+button:hover>i {
     color: var(--color-font-primary);
+    
 }
 
-button i{
+button i {
     color: var(--color-bg-primary);
     font-weight: bold;
     pointer-events: none;
 }
 
-input, select{
+input, select {
     padding: 0.25rem 0.5rem;
+    outline: none;
+    border: none;
+    font-size: .9rem;
 }
 
-.hide{
+.hide {
     display: none;
+}
+
+/* To-Do Header */
+
+.to-do--container {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #fdfdfda2;
+    padding: 1.5em;
+    border-radius: 15px;
+}
+
+.to-do--container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+#to-do--form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+#to-do--form p, 
+#edit-form p{
+    margin-bottom: .5rem;
+    font-weight: bold;  
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: .3rem;
+}
+
+#cancel-edit--btn{
+    margin-top: 1rem;
+}
+
+/*To-Do Toolbar*/
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-line);
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid var(--color-line);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select{
+    flex: 1;
+}
+
+/* To-Do List */
+
+.to-do{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-line);
+    transition: .3s;
+}
+
+.to-do h3{
+    flex: 1;
+    font-size: .9rem;
+}
+
+.to-do button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color: var(--color-bg-primary);
+}
+
+.done h3{
+    color: var(--color-font-primary);
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.done button:hover {
+    background-color: var(--color-bg-primary);
+    color: var(--color-font-primary);
+    border: 2px solid #fdfdfda2;
 }
