@@ -18,7 +18,7 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-
+    overflow: hidden;
 }
 
 button {
@@ -69,6 +69,12 @@ input, select {
     background-color: #fdfdfda2;
     padding: 1.5em;
     border-radius: 15px;
+    height: 600px;
+    overflow: auto;
+}
+
+.to-do--container::-webkit-scrollbar{
+    width: 0 !important;
 }
 
 .to-do--container header {
